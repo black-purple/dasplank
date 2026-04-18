@@ -1,0 +1,174 @@
+---
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DAS PLANK</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .content {
+      text-align: center;
+      z-index: 10;
+      padding: 2rem;
+    }
+
+    .title {
+      font-size: 5rem;
+      font-weight: 900;
+      color: #FFD700;
+      text-shadow: 0 0 30px rgba(255, 215, 0, 0.5);
+      letter-spacing: 0.2em;
+      margin-bottom: 0.5rem;
+      animation: fadeInDown 1s ease-out;
+    }
+
+    .subtitle {
+      font-size: 1.5rem;
+      font-weight: 500;
+      color: #DD0000;
+      letter-spacing: 0.3em;
+      margin-bottom: 2rem;
+      animation: fadeInUp 1s ease-out 0.3s both;
+    }
+
+    .email {
+      font-size: 1.1rem;
+      color: #333333;
+      text-decoration: none;
+      border-bottom: 2px solid #FFD700;
+      padding-bottom: 0.2rem;
+      transition: all 0.3s ease;
+      animation: fadeIn 1s ease-out 0.6s both;
+    }
+
+    .email:hover {
+      color: #FFD700;
+      border-bottom-color: #DD0000;
+    }
+
+    .waves-container {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 200px;
+      overflow: hidden;
+    }
+
+    .wave {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 200%;
+      height: 100%;
+      background-repeat: repeat-x;
+      background-size: 50% 100%;
+    }
+
+    .wave-black {
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 120' preserveAspectRatio='none'%3E%3Cpath d='M0,60 C150,90 350,30 600,60 C850,90 1050,30 1200,60 L1200,120 L0,120 Z' fill='%23000000'/%3E%3C/svg%3E");
+      animation: wave-move 8s linear infinite;
+      opacity: 0.9;
+      height: 80px;
+    }
+
+    .wave-red {
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 120' preserveAspectRatio='none'%3E%3Cpath d='M0,40 C200,70 400,20 600,50 C800,80 1000,30 1200,60 L1200,120 L0,120 Z' fill='%23DD0000'/%3E%3C/svg%3E");
+      animation: wave-move 10s linear infinite reverse;
+      opacity: 0.85;
+      height: 120px;
+      bottom: 30px;
+    }
+
+    .wave-gold {
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 120' preserveAspectRatio='none'%3E%3Cpath d='M0,20 C180,60 360,0 600,40 C840,80 1020,20 1200,60 L1200,120 L0,120 Z' fill='%23FFD700'/%3E%3C/svg%3E");
+      animation: wave-move 12s linear infinite;
+      opacity: 0.9;
+      height: 160px;
+      bottom: 60px;
+    }
+
+    @keyframes wave-move {
+      0% {
+        transform: translateX(0);
+      }
+      100% {
+        transform: translateX(-50%);
+      }
+    }
+
+    @keyframes fadeInDown {
+      from {
+        opacity: 0;
+        transform: translateY(-30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .title {
+        font-size: 3rem;
+      }
+      .subtitle {
+        font-size: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="content">
+    <h1 class="title">DAS PLANK</h1>
+    <h2 class="subtitle">DEUTSHER TECHNIK</h2>
+    <a href="mailto:contact@dasplank.com" class="email">contact@dasplank.com</a>
+  </div>
+
+  <div class="waves-container">
+    <div class="wave wave-gold"></div>
+    <div class="wave wave-red"></div>
+    <div class="wave wave-black"></div>
+  </div>
+</body>
+</html>
